@@ -1,6 +1,10 @@
-@ExamenReposicion_HostAddress = http://localhost:5237
+POST http://localhost:5237/api/auth/register
+Content-Type: application/json
 
-GET {{ExamenReposicion_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
+{
+  "nombreCompleto": "Usuario Prueba",
+  "correo": "prueba@gmail.com",
+  "contrasena": "Prueba123!",
+  "telefono": "99999999",
+  "fechaNacimiento": "2000-01-01"
+}

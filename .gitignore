@@ -3,3 +3,10 @@ obj/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
+
+.idea/
+**/.idea/
+firebase-key.json
+**/firebase-key.json
+bin/
+obj/
