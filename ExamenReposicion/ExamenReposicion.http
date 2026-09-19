@@ -1,10 +1,31 @@
+### Registrar usuario
 POST http://localhost:5237/api/auth/register
 Content-Type: application/json
 
 {
-  "nombreCompleto": "Usuario Prueba",
+  "nombre": "Usuario Prueba",
   "correo": "prueba@gmail.com",
-  "contrasena": "Prueba123!",
-  "telefono": "99999999",
-  "fechaNacimiento": "2000-01-01"
+  "contrasena": "Prueba123"
+}
+
+### Login
+POST http://localhost:5237/api/auth/login
+Content-Type: application/json
+
+{
+  "correo": "prueba@gmail.com",
+  "contrasena": "Prueba123!"
+}
+
+
+### Crear gasto
+POST http://localhost:5237/api/gastos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImNyZUU4N2Nuc0Y2ZlM0NmJuT0ZJIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZW1haWxhZGRyZXNzIjoicHJ1ZWJhQGdtYWlsLmNvbSIsImV4cCI6MTc4OTc5Mjk2M30.yGnvqH6imVVNmQKQMyZfelTaHu_y818jlBaCa40kG7s
+Content-Type: application/json
+
+{
+  "monto": 250,
+  "categoria": "Comida",
+  "descripcion": "Almuerzo",
+  "fecha": "2026-09-18T12:00:00Z"
 }
